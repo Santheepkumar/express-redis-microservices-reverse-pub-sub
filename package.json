@@ -1,0 +1,27 @@
+{
+  "name": "express-microservices",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gateway": "nodemon gateway/index.js",
+    "product": "nodemon product-service/index.js",
+    "order": "nodemon order-service/index.js",
+    "product:gw": "nodemon product-gw/index.js",
+    "product:1": "nodemon product-gw/product-service1/index.js",
+    "product:2": "nodemon product-gw/product-service2/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1",
+    "ioredis": "^5.4.1",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.7"
+  }
+}

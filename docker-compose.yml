@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - '6379:6379'
+
+  products-service:
+    build:
+      context: ./product-service
+    depends_on:
+      - redis
+
+  orders-service:
+    build:
+      context: ./order-service
+    depends_on:
+      - redis
+
+  gateway:
+    build:
+      context: ./gateway
+    ports:
+      - '3000:3000'
+    depends_on:
+      - redis
