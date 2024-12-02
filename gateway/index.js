@@ -5,6 +5,7 @@ import {
   PRODUCT_CHANNEL,
   PRODUCTS_PATTERN,
 } from '../shared/patterns.js';
+import Redis from 'ioredis';
 
 const app = express();
 
@@ -55,12 +56,18 @@ app.post('/orders', async (req, res, next) => {
   }
 });
 
-async () => {
-  const monitor = await redis.monitor();
-  monitor.on('redis monitor', console.log);
-  // Any other tasks
-  monitor.disconnect();
-};
+
+const rediss = new Redis();
+const keysStream = rediss.scanStream();
+
+keysStream.on("data", (resultKeys) => {
+  console.log("Redis stream::keysStream: All active redis keys");
+  for (let i = 0; i < resultKeys.length; i++) {
+    console.log(resultKeys[i]);
+  }
+});
+
+
 // Start Gateway
 app.listen(3000, () => {
   console.log('Gateway Service running on port 3000');

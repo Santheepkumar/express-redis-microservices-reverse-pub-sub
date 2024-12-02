@@ -1,6 +1,7 @@
 import Redis from 'ioredis';
 export const redisPub = new Redis(); // Redis publisher
 export const redisSub = new Redis(); // Redis subscriber
+export const redis = new Redis(); // Redis common
 import { v4 as uuidv4 } from 'uuid';
 
 export const redisFollow = (channel, id) => {
@@ -78,4 +79,23 @@ export const redisSubPub = (channel, cb) => {
   }
 };
 
-export const redis = new Redis();
+export const redisRoundRobin = async (key, size) => {
+  const rrKey = `${key}_RR`
+  const getReturnValue = (curIndex) => {
+    return {
+      pattern: key,
+      rrPattern: `${key}_RR`,
+      rrIndex,
+      servicePattern: `${key}_${curIndex}`
+    }
+  }
+  const rrIndex = JSON.parse(await redis.get(`${key}_RR`)) || 1
+  if (size === rrIndex) {
+    await redis.set(rrKey, JSON.stringify(1))
+
+    return getReturnValue(rrIndex)
+  }
+  await redis.set(rrKey, JSON.stringify(rrIndex + 1))
+  return getReturnValue(rrIndex)
+}
+
