@@ -107,7 +107,7 @@ export class RedisPSSP {
     this.pub = new Redis(pubCon ? pubCon : undefined)
     this.rr = new Redis(pubCon ? pubCon : undefined)
   }
-  private redisFollow(channel, id) {
+  #redisFollow(channel, id) {
     const replyChannel = `${channel}:reply`;
     return new Promise((resolve, reject) => {
       this.sub.subscribe(replyChannel, (err, count) => {
