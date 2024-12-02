@@ -1,3 +1,4 @@
+## example compose not for prod
 version: '3.8'
 services:
   redis:
