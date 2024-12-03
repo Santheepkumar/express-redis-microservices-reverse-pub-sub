@@ -1,0 +1,85 @@
+<mxfile host="65bd71144e">
+    <diagram id="_bEsWtpvnHsYVrp_kCv3" name="Page-1">
+        <mxGraphModel dx="1627" dy="1782" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="84" value="" style="whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="198" y="129" width="943" height="709" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" source="4" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" target="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="499" y="235" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="79" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" source="4" target="25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="API Gateway" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="421.97" y="189" width="76.5" height="93" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Redis" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Cache_Redis_Product.svg;" vertex="1" parent="1">
+                    <mxGeometry x="238.78" y="-120" width="140.43" height="117.96" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Product Service" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="324" y="415" width="73.5" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Order Service" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="522.75" y="415" width="73.5" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Product Service 1" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="592" y="656" width="73.5" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="Product Service 2" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="757" y="656" width="73.5" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Product Service 3&lt;br&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="932" y="656" width="73.5" height="84" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="757" y="404" width="119.5" height="93" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Product Gateway&lt;br&gt;And Round Robbin load balancer" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.api_gateway;fillColor=#D9A741;gradientColor=none;" vertex="1" parent="62">
+                    <mxGeometry width="76.5" height="93" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="62">
+                    <mxGeometry x="20.75" y="26.5" width="35" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" source="25" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" source="25">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="795" y="649" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="1" source="25" target="28">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.android;fillColor=#8CC64F;gradientColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="442.72" y="215.5" width="35" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Pub&#10;Sub" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="288" y="30" width="42" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="91">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint as="sourcePoint"/>
+                        <mxPoint y="70" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="90" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;fontColor=#FFFFFF;" edge="1" parent="91">
+                    <mxGeometry width="80" relative="1" as="geometry">
+                        <mxPoint x="42" y="70" as="sourcePoint"/>
+                        <mxPoint x="42" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
